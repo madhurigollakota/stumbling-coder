@@ -10,4 +10,6 @@ if __name__ == '__main__':
     for _ in range(int(input())):
         name = input()
         score = float(input())
-        students.insert(_,[name,score])
+        students.append([name,score])
+    
+    print(*sorted([item[0] for item in students if item[1]==sorted(set([m for l,m in students]))[1]]),sep='\n')
